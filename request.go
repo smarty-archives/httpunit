@@ -48,6 +48,5 @@ func (this *RequestBuilder) body() (body io.Reader) {
 	if err != nil {
 		panic(err)
 	}
-	this.Headers.Set("Content-Type", "application/json; charset=utf-8")
 	return bytes.NewReader(raw)
 }
