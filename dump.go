@@ -47,7 +47,7 @@ func formatDump(prefix, dump string) string {
 
 func (this *DumpHandler) Teardown() {
 	if testing.Verbose() || this.t.Failed() {
-		this.t.Log(this.dump.String())
+		this.t.Log("\n"+this.dump.String())
 	}
 }
 
